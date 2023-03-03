@@ -12,70 +12,21 @@
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-        <!-- Styles -->
-        {{-- <style>
-            body {
-                font-family: "Nunito";
-                font-size: 16px;
-            }
-            div.container {
-                width: 78%;
-                margin: 0 auto;
-            }
-            form div, form label, form input {
-                display:block;
-            }
-
-            form div {
-                margin-bottom: 10px;
-            }
-
-            form input {
-                padding: 5px;
-                width: 100%;
-                border-radius: 5px;
-                border: none;
-                border-bottom: 1px solid #ccc;
-                outline: none;
-            }
-
-            form button {
-                padding: 10px 15px;
-                background: #036;
-                border: 1px solid #000;
-                border-radius: 5px;
-                color: #fff;
-                font-weight: bold;
-            }
-
-            div.error-message {
-                color: #f00;
-                font-weight: bold;
-                padding-top: 4px;
-            }
-
-            .alert {
-                position: relative;
-                padding: .75rem 1.25rem;
-                margin-bottom: 1rem;
-                border: 1px solid transparent;
-                border-radius: .25rem;
-            }
-
-            .alert-success {
-                color: #155724;
-                background-color: #d4edda;
-                border-color: #c3e6cb;
-            }
-        </style> --}}
 
     @livewireStyles
 
     </head>
-    <body class="">
+    <body>
 
-        {{-- @livewire('contact-create') --}}
-        <livewire:contact-create></livewire:contact-create>
+        <div class="container">
+
+            {{-- @livewire('contact-create') --}}
+            {{-- <livewire:contact-create></livewire:contact-create> --}}
+            {{-- <livewire:contact.contact-edit :contact="2"></livewire:contact.contact-edit> --}}
+           <div class="m-4">
+               {{$slot}}
+            </div>
+        </div>
 
     @livewireScripts
 

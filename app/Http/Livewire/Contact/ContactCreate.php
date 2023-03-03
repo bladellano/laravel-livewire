@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Contact;
 
 use App\Models\Contact;
 use Livewire\Component;
@@ -40,6 +40,6 @@ class ContactCreate extends Component
 
     public function render()
     {
-        return view('livewire.contact-create');
+        return view('livewire.contact.contact-create')->layout('welcome');
     }
 }

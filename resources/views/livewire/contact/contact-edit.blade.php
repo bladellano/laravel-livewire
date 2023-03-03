@@ -1,9 +1,9 @@
 <div>
 
-    <h2>Criar Contato</h2>
+    <h2>Editar Contato</h2>
 
     <div>
-        <form wire:submit.prevent="create" method="post">
+        <form wire:submit.prevent="update" method="post">
 
             <div>
                 @if (session()->has('message'))
@@ -16,9 +16,9 @@
             <div>
                 <label>Nome</label>
 
-                <input type="text" wire:model="name">
+                <input type="text" class="form-control" wire:model="name">
 
-                <div class="error-message">
+                <div class="invalid-feedback d-block">
                     @error('name')
                         {{$message}}
                     @enderror
@@ -28,9 +28,9 @@
             <div>
                 <label>Email</label>
 
-                <input type="email" wire:model="email">
+                <input type="email" class="form-control" wire:model="email">
 
-                <div class="error-message">
+                <div class="invalid-feedback d-block">
                     @error('email')
                         {{$message}}
                     @enderror
@@ -40,17 +40,17 @@
             <div>
                 <label>Telefone</label>
 
-                <input type="text" wire:model="phone">
+                <input type="text" class="form-control" wire:model="phone">
 
-                <div class="error-message">
+                <div class="invalid-feedback d-block">
                     @error('phone')
                         {{$message}}
                     @enderror
                 </div>
             </div>
 
-            <button type="submit">
-                Adicionar Contato
+            <button type="submit" class="btn btn-block btn-success mt-4">
+                Editar Contato
             </button>
         </form>
 
